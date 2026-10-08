@@ -1,0 +1,15 @@
+# Launch film — REAL voiceover timing (vo_in/launch_en.mp3, 99.97 s; times at 1.0x speech)
+NOTE: the recorded VO is NOT the script in script/MAIA_launch_VO_EN.md — it is a longer different text. Use this timing, not the old beat sheet. (Whisper writes the brand as 'Maya'; the VO line at the end reads like 'maya.whatsapp.my' in the transcript — to be confirmed by the user by ear; on-screen CTA stays maia.wasap.my.)
+| VO time | Spoken | Scene |
+|---|---|---|
+| 0.0–26.3 | Orders don't arrive in neat forms… WhatsApp message, voice note, handwritten list photographed on a phone, an email… someone has to read it, understand it, type everything in by hand | S2 messy inputs (logo intro 4.5 s overlaps the first ~4.5 s: use the chaos intro as the opener, then continue the montage; ≈ 22 s of montage after the intro) — beat cues: 2.7 'however customers send', 5.9 WhatsApp message, 7.2 voice note, 8.8–12.4 handwritten list photographed + email, 13.0 'everyone looks different', 15.3 'still needs to become an order', 18.7–26.3 staff reading/typing by hand |
+| 26.7–34.6 | Meet MAIA. Instead of starting from scratch, your team forwards the order to MAIA, right where they work. WhatsApp. | S3a forward to MAIA in WhatsApp (MAIA chat opens, forwarded bubbles, 'WhatsApp' lands at 34.0) |
+| 35.0–56.3 | MAIA reads the message, listens to the voice note, reads the handwritten list; matches every item to the right SKU, unit, agreed price; messy order becomes clean structured information | S3b understand (reads → listens → reads handwriting at 35.0/36.5/38.5; SKU matching 44.5–50.2; structured table 50.6–56.3) |
+| 56.3–63.2 | …prepares the quotation, the sales order, the delivery order, and the invoice. | S4 Quotation ≈56.3–58.8, S5 SO ≈58.8–60.8, S6 DO ≈60.8–62.0, S7 invoice ≈62.0–63.2 (fast title-led intro of each document) |
+| 63.6–70.2 | Same order, same details. No need to keep retyping the same information from one document to the next. | the same order's lines/totals visibly flowing quote → SO → DO → invoice (consistent data), 6.6 s |
+| 70.5–77.6 | Your team stays in control. They review, correct anything, and confirm before it goes through. | human review/confirm moment (OMS review panel / confirm button / WhatsApp 'Confirm'), 7.1 s |
+| 78.0–88.7 | Everything syncs back to your business system, SQL Account, AutoCount, or your connected ERP. So WhatsApp and your order system finally work together. | S8 ERP sync, 10.7 s (SQL Account / AutoCount text labels) |
+| 89.6–99.1 | MAIA lives in WhatsApp, turns messy orders into structured work, and syncs them back to your system. Start at [maia.wasap.my]. | S9 outro: start the 5 s outro file at ≈94.0 s so the CTA pill lands at ≈98 s on 'Start at'; 89.6–94.0 recap shot (chat + ERP side by side) |
+Film length at 1.0x ≈ 100–101 s. User target was 1:30; decision pending on speeding up (≈×1.10) vs accepting ~1:40. Build scene clips with ±10% slack so they can be retimed.
+
+**DECISION (user): keep 1:40, no speed-up. Pronunciation fine as is. Build to the 1.0x times above; film length ≈ 1:41.**

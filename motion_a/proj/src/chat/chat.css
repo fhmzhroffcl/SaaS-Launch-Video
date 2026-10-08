@@ -1,0 +1,121 @@
+@font-face { font-family: 'Google Sans'; src: url('../../fonts/GoogleSans-VF.woff2') format('woff2'); font-weight: 100 900; }
+@font-face { font-family: 'Noto Sans Mono'; src: url('../../fonts/NotoSansMono-VF.ttf') format('truetype'); font-weight: 100 900; }
+@font-face { font-family: 'Noto Color Emoji'; src: url('../../fonts/NotoColorEmoji.ttf') format('truetype'); }
+
+* { box-sizing: border-box; }
+
+.wa-screen { position: relative; overflow: hidden; background: #fff; font-family: var(--ui); color: var(--text);
+  --ui: 'Google Sans', 'Noto Color Emoji', sans-serif; --mono: 'Noto Sans Mono', monospace;
+  --text: #0B0F10; --secondary: #5A6264; --meta: #575F61; --link: #323232;
+  --body: 29.76px; --lh: 36.2px;
+  font-feature-settings: "tnum" 1; -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision; }
+
+/* ---------- phone ---------- */
+.phone { position: absolute; }
+.phone-rim { position: absolute; inset: 0; border-radius: 124px; background: #F78649; box-shadow: 0 0 34px rgba(0,0,0,.42); }
+.phone-bezel { position: absolute; inset: 4px 4px 4px 4px; border-radius: 120px; background: #202020; box-shadow: 0 0 0 1px #C06B3E; }
+.phone-btn { position: absolute; left: 694px; width: 9px; background: #D9723B; border-radius: 0 4px 4px 0; box-shadow: 0 0 12px rgba(0,0,0,.25); }
+.phone-screen { position: absolute; left: 18px; top: 18px; width: 662px; height: 1520px; border-radius: 106px; overflow: hidden; background: #EAECEB; }
+.phone-camera { position: absolute; left: 328px; top: 62px; width: 41px; height: 41px; border-radius: 50%; background: #202020; z-index: 5; }
+.phone-camera-lens { position: absolute; left: 6px; top: 6px; width: 29px; height: 29px; border-radius: 50%;
+  background: radial-gradient(circle at 50% 45%, #4F5C67 0%, #4E5A64 55%, #43484C 100%); }
+
+/* ---------- chrome ---------- */
+.top-chrome { position: absolute; left: 0; top: 0; width: 662px; height: 166px; background: #EAECEB; z-index: 3; }
+.statusbar { position: absolute; left: 0; top: 0; width: 662px; height: 50px; }
+.sb-clock { position: absolute; left: 33px; top: 24px; font-size: 24.3px; font-weight: 600; line-height: 30px; color: #161616; }
+.sb-notif { position: absolute; left: 100px; top: 18px; }
+.sb-system { position: absolute; left: 388px; top: 21px; }
+.chat-header { position: absolute; left: 0; top: 50px; width: 662px; height: 116px; }
+.hdr-back { position: absolute; left: 29px; top: 49px; }
+.hdr-more { position: absolute; left: 616px; top: 50px; }
+.hdr-avatar { position: absolute; left: 99px; top: 31px; width: 67px; height: 67px; border-radius: 50%; overflow: hidden; background: #F7F7F7; }
+.hdr-avatar img { width: 67px; height: 67px; display: block; }
+.hdr-name { position: absolute; left: 189px; top: 29px; font-size: 31.9px; line-height: 40px; white-space: nowrap; word-spacing: -2.5px; color: #0B0F12; }
+.hdr-sub { position: absolute; left: 188px; top: 71px; font-size: 24.3px; line-height: 30px; white-space: nowrap; color: #0B0F11; }
+
+/* ---------- wallpaper + list ---------- */
+.wallpaper { position: absolute; left: 0; top: 166px; width: 662px; height: 1354px; background-repeat: no-repeat; background-position: 0 0; }
+.msg-list { position: absolute; left: 0; width: 662px; display: flex; flex-direction: column; justify-content: flex-end; }
+.wa-row { display: flex; width: 100%; flex-shrink: 0; }
+.wa-row-in { justify-content: flex-start; padding-left: 24px; }
+.wa-row-out { justify-content: flex-end; padding-right: 23px; }
+
+.wa-bubble { position: relative; border-radius: 30px; padding: 17.6px 23px 17px 21.5px; font-size: var(--body); line-height: var(--lh); }
+.wa-in { background: #fff; color: var(--text); }
+.wa-out { background: #333333; color: #fff; }
+.wa-in.wa-has-tail { border-top-left-radius: 0; }
+.wa-out.wa-has-tail { border-top-right-radius: 0; }
+.wa-tail { position: absolute; top: 0; }
+.wa-tail-in { left: -13px; }
+.wa-tail-out { right: -13px; }
+
+.wa-line { white-space: pre; height: var(--lh); box-sizing: content-box; }
+.wa-line.has-emoji { padding: 6px 0 9px; }
+.wa-line.has-code { padding: 2px 0 2px; }
+.wa-p, .wa-li { position: relative; }
+.wa-li-marker { position: absolute; top: 0; }
+.wa-li-marker.ol { letter-spacing: -5px; }
+.wa-bold { font-weight: 500; }
+.wa-link { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 5px; color: var(--link); }
+.wa-out .wa-link { color: #fff; }
+.wa-emoji { font-family: 'Noto Color Emoji'; font-size: 33px; line-height: 0; display: inline-block; transform: translateY(2px) scale(1.14); }
+.wa-quote .wa-emoji { transform: none; }
+
+.wa-code { font-family: var(--mono); font-size: 29.5px; background: #D0D1D3; padding: 0 8px 0 7px; color: #0A1114; }
+.wa-code.open-l { padding-left: 0; }
+.wa-code.open-r { padding-right: 0; }
+.wa-code-link { font-family: var(--ui); font-size: var(--body); background: #fff; color: var(--link); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 5px; }
+
+/* timestamps */
+.wa-meta-spacer { visibility: hidden; font-size: 23px; margin-left: 17px; }
+.wa-meta { position: absolute; right: 23px; bottom: 5.5px; display: flex; align-items: center; font-size: 23px; line-height: 30px; white-space: nowrap; }
+.wa-meta-in { color: var(--meta); }
+.wa-meta-out { color: #999; right: 14px; }
+
+/* quote */
+.wa-quote { display: flex; flex-direction: column; justify-content: center; position: relative; margin: -9.6px -16px 0 -14.5px; min-height: 86px; border-radius: 22px; padding: 8.7px 16px 5.3px 22px; font-size: 26.1px; line-height: 33px; overflow: hidden; margin-bottom: 23px; }
+.wa-quote-author { height: 34px; line-height: 34px; font-size: 27.4px; }
+.wa-quote::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 7px; }
+.wa-quote-in { background: #F6F5F3; color: #5A6264; }
+.wa-quote-in::before { background: #333; }
+.wa-quote-out { background: #2E2E2E; color: #979797; }
+.wa-quote-out::before { background: #fff; }
+.wa-quote-author { font-weight: 500; color: #1A2023; }
+.wa-quote-out .wa-quote-author { color: #fff; }
+.wa-quote .wa-line { height: 33px; padding: 0; position: relative; top: 1px; }
+.wa-quote .wa-line.has-emoji { padding: 1px 0 0; }
+.wa-quote .wa-line.has-code { padding: 2px 0; }
+.wa-quote .wa-emoji { font-size: 26px; }
+.wa-quote-out { padding-bottom: 7.3px; margin-bottom: 20px; }
+.wa-quote-out .wa-code { background: #292A2C; color: #959597; font-size: 23.7px; padding: 1.4px 8.5px 1.4px 6.5px; letter-spacing: 7px; }
+
+/* pdf */
+.wa-bubble-pdf { padding: 8px 8px 60px 8px; }
+.wa-bubble-pdf .wa-meta { bottom: 14px; }
+.wa-pdf { position: relative; width: 476px; height: 140px; background: #F6F5F3; border-radius: 22px; }
+.wa-pdf-icon { position: absolute; left: 16.5px; top: 47px; }
+.wa-pdf-body { position: absolute; left: 69px; top: 19px; }
+.wa-pdf-name { font-size: var(--body); line-height: 33px; height: 33px; white-space: pre; color: var(--text); }
+.wa-pdf-meta { font-size: 23px; line-height: 30px; margin-top: 11px; color: var(--secondary); white-space: pre; }
+.wa-pdf-dot { margin: 0 9px 0 9.5px; }
+.wa-fwd { position: absolute; right: -77px; top: 50%; margin-top: -30px; width: 60px; height: 60px; border-radius: 50%; background: #BCC0C3; display: flex; align-items: center; justify-content: center; }
+
+.scroll-down { position: absolute; left: 579px; top: 1298px; width: 61px; height: 61px; border-radius: 50%; background: #F7F8F8; display: flex; align-items: center; justify-content: center; z-index: 2; }
+
+/* composer */
+.composer { position: absolute; left: 18px; top: 1397px; width: 518px; height: 86px; border-radius: 43px; background: #fff; z-index: 2; }
+.cmp-emoji { position: absolute; left: 16.7px; top: 17.7px; }
+.cmp-cursor { position: absolute; left: 88px; top: 23px; width: 2.5px; height: 42px; background: #323231; }
+.cmp-placeholder { position: absolute; left: 92px; top: 20px; font-size: 33.4px; line-height: 44px; color: #5A6265; }
+.cmp-attach { position: absolute; left: 360.6px; top: 20px; }
+.cmp-camera { position: absolute; left: 451.8px; top: 21px; }
+.cmp-mic { position: absolute; left: 554px; top: 1395px; width: 88px; height: 88px; border-radius: 50%; background: #333; display: flex; align-items: center; justify-content: center; z-index: 2; }
+.gesture-bar { position: absolute; left: 218px; top: 1499px; width: 226px; height: 8px; border-radius: 4px; background: #757575; z-index: 2; }
+
+/* ---------- additions for the Duo scenes ---------- */
+.wa-fwd-label { display: flex; align-items: center; gap: 8px; height: 32px; margin: -3px 0 5px -1px; font-size: 24.5px; font-style: italic; color: #667075; }
+.wa-out .wa-fwd-label { color: #A9A9A9; }
+.wa-bubble-pdf.wa-pdf-cap { padding: 8px 8px 17px 8px; }
+.wa-bubble-pdf.wa-pdf-cap .wa-meta { bottom: 5.5px; }
+.wa-caption { padding: 13px 15px 0 13.5px; }

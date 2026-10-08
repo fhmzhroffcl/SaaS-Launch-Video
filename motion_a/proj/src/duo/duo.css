@@ -1,0 +1,26 @@
+/* ---------- Duo device (from maia-duo-scenes/src/scenes.css) ---------- */
+.duo { position: absolute; }
+.duo-shadow { position: absolute; top: 0; height: 100%;
+  box-shadow: 0 38px 70px -18px rgba(70, 44, 16, .30), 0 14px 28px -10px rgba(70, 44, 16, .18), 0 2px 6px rgba(0, 0, 0, .08); }
+.duo-inner { position: absolute; left: 0; top: 0; width: 725px; height: 1014px; transform-origin: 0 0; }
+.duo-svg { position: absolute; left: 0; overflow: visible; }
+.duo-screen { position: absolute; overflow: hidden; background: #EAECEB; isolation: isolate; }
+.duo-camera { position: absolute; border-radius: 50%; background: #050505; z-index: 20; box-shadow: 0 0 0 1.5px rgba(0,0,0,.55); }
+.duo-lens { position: absolute; left: 30%; top: 30%; width: 40%; height: 40%; border-radius: 50%;
+  background: radial-gradient(circle at 42% 38%, #56606A 0%, #262A30 38%, #0D0E10 70%); box-shadow: 0 0 0 3px #141414; }
+
+/* ---------- WhatsApp on the Duo screen (virtual (662*Z) x (965*Z) units, scaled by 1/Z) ---------- */
+.duo-chat { position: absolute; left: 0; top: 0; width: var(--W); height: var(--H); transform-origin: 0 0; background: #EAECEB; }
+.duo-wall { position: absolute; left: 0; top: 224px; width: var(--W); bottom: 0; background-repeat: no-repeat; background-position: 0 -60px; background-size: var(--W) auto; }
+.duo-list { position: absolute; left: 0; top: 0; bottom: 137px; width: var(--W); display: flex; flex-direction: column; justify-content: flex-end; }
+.duo-top { position: absolute; left: 0; top: 0; width: var(--W); height: 224px; background: #EAECEB; z-index: 3; }
+.duo-chat .chat-header { top: 108px; width: var(--W); }
+.duo-chat .hdr-more { left: calc(var(--W) - 46px); }
+.duo-sb { position: absolute; left: 0; top: 0; width: var(--W); height: 108px; }
+.duo-sb-clock { position: absolute; left: 52px; top: 44px; font-size: 26px; font-weight: 600; line-height: 30px; color: #161616; letter-spacing: .2px; }
+.duo-sb-icons { position: absolute; right: calc(var(--Z) * 89px + 20px); top: 48px; display: flex; gap: 9px; align-items: center; }
+.duo-chat .composer { top: calc(var(--H) - 123px); width: calc(var(--W) - 144px); }
+.duo-chat .cmp-attach { left: auto; right: 111px; }
+.duo-chat .cmp-camera { left: auto; right: 18px; }
+.duo-chat .cmp-mic { top: calc(var(--H) - 125px); left: calc(var(--W) - 108px); }
+.duo-chat .gesture-bar { top: calc(var(--H) - 26px); left: calc(var(--W) / 2 - 113px); }

@@ -1,0 +1,55 @@
+/* ---------- video additions to the WhatsApp recreation ---------- */
+.row-wrap { display: grid; flex-shrink: 0; }
+.row-inner { min-height: 0; }
+.wa-stack { position: relative; display: flex; flex-direction: column; align-items: stretch; }
+.nav-layer { position: absolute; inset: 0; }
+.nav-top { z-index: 10; box-shadow: -18px 0 40px rgba(0,0,0,.18); }
+.nav-dim { position: absolute; inset: 0; background: #000; z-index: 6; }
+
+.wa-date-row { display: flex; justify-content: center; margin: 22px 0 6px; }
+.wa-date { background: #FFFFFF; color: #5A6264; font-size: 23px; line-height: 30px; padding: 7px 20px; border-radius: 16px; box-shadow: 0 1px 1px rgba(0,0,0,.06); }
+
+.typing-bubble { display: flex; gap: 11px; align-items: center; padding: 26px 28px 24px 28px; height: 74px; }
+.tdot { display: block; width: 14px; height: 14px; border-radius: 50%; background: #8B9396; }
+
+/* reaction badge */
+.wa-react { position: absolute; left: 22px; bottom: -32px; width: 60px; height: 50px; border-radius: 26px; background: #fff; border: 3px solid #EAECEB;
+  display: flex; align-items: center; justify-content: center; transform-origin: 50% 50%; box-shadow: 0 2px 5px rgba(0,0,0,.12); z-index: 2; }
+.wa-react-emoji { font-family: 'Noto Color Emoji'; font-size: 28px; line-height: 1; }
+.spark-wrap { position: absolute; left: 50%; top: 50%; width: 0; height: 0; }
+.spark { position: absolute; left: -11px; top: -11px; }
+
+/* interactive reply button (under a MAIA bubble) */
+.wa-btn { position: relative; overflow: hidden; margin-top: 5px; height: 74px; border-radius: 22px; background: #fff; display: flex; align-items: center; justify-content: center; gap: 10px;
+  font-size: 30px; font-weight: 500; color: #C57800; }
+.wa-btn-ripple { position: absolute; left: 50%; top: 50%; width: 80px; height: 80px; border-radius: 50%; background: #EE9A00; }
+
+/* voice note (outgoing) */
+.vn { width: 500px; padding: 4px 4px 36px 2px; }
+.vn-top { display: flex; align-items: center; gap: 18px; height: 70px; }
+.vn-play { width: 44px; display: flex; justify-content: center; }
+.vn-wave { position: relative; flex: 1; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+.vn-wave > span:not(.vn-dot) { display: block; width: 5px; border-radius: 3px; }
+.vn-dot { position: absolute; top: 50%; width: 22px; height: 22px; margin: -11px 0 0 -11px; border-radius: 50%; background: #53BDEB; }
+.vn-mic { width: 62px; height: 62px; border-radius: 50%; background: #4A4A4A; display: flex; align-items: center; justify-content: center; }
+.vn-dur { position: absolute; left: 86px; bottom: 6px; font-size: 23px; color: #9A9A9A; line-height: 30px; }
+.vn-trans { margin: 6px 0 0 4px; font-size: 27px; line-height: 34px; color: #D7D7D7; font-style: italic; }
+
+/* composer states */
+.cmp-text { position: absolute; left: 92px; top: 20px; font-size: 33.4px; line-height: 44px; color: #0B0F10; white-space: pre; display: flex; align-items: center; }
+.cmp-caret { display: inline-block; width: 3px; height: 40px; background: #EE9A00; margin-left: 2px; }
+.rec-dot { position: absolute; left: 30px; top: 30px; width: 26px; height: 26px; border-radius: 50%; background: #E5484D; }
+.rec-time { position: absolute; left: 74px; top: 20px; font-size: 33px; line-height: 44px; color: #333; font-variant-numeric: tabular-nums; }
+.rec-hint { position: absolute; left: 200px; top: 22px; font-size: 29px; line-height: 44px; color: #8A9093; white-space: pre; }
+.cmp-mic { transform-origin: 50% 50%; }
+
+/* in-phone PDF viewer */
+.pdfv { position: absolute; inset: 0; background: #E4E1DC; }
+.pdfv-top { position: absolute; left: 0; top: 0; right: 0; height: 224px; background: #FFFFFF; box-shadow: 0 2px 8px rgba(0,0,0,.08); z-index: 2; }
+.pdfv-bar { position: absolute; left: 0; top: 108px; right: 0; height: 116px; }
+.pdfv-back { position: absolute; left: 29px; top: 49px; }
+.pdfv-icon { position: absolute; left: 96px; top: 36px; }
+.pdfv-title { position: absolute; left: 152px; top: 28px; right: 100px; font-size: 30px; line-height: 40px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #0B0F12; }
+.pdfv-sub { position: absolute; left: 152px; top: 70px; font-size: 23px; line-height: 30px; color: #5A6264; }
+.pdfv-body { position: absolute; left: 0; right: 0; top: 224px; bottom: 0; }
+.pdfv-page { position: absolute; left: 40px; top: 44px; background: #fff; box-shadow: 0 6px 22px rgba(60,40,20,.18); border-radius: 6px; overflow: hidden; }
