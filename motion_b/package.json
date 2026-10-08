@@ -1,0 +1,12 @@
+{
+  "name": "maia-launch-document-scenes",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "render": "node src/render.js",
+    "render:all": "cd src && sh all.sh"
+  },
+  "dependencies": {
+    "puppeteer-core": "25.12.0"
+  }
+}

@@ -1,6 +1,14 @@
-const puppeteer = require('/Users/fahimzahar/Downloads/MAIA/Codex_MAIA/06. Creatives/New Videos_MAIA/10. Feature-Outcome Series/motion/src_a/oms/node_modules/puppeteer-core');
+const puppeteer = require('puppeteer-core');
 const { spawn } = require('child_process'); const path=require('path'), fs=require('fs');
-const CHROME='/Users/fahimzahar/.cache/hyperframes/chrome/chrome-headless-shell/mac_arm-152.0.7928.2/chrome-headless-shell-mac-arm64/chrome-headless-shell';
+const chromeCandidates = [
+  '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+  '/usr/bin/google-chrome',
+  '/usr/bin/chromium',
+  '/usr/bin/chromium-browser',
+  process.env.PROGRAMFILES && path.join(process.env.PROGRAMFILES, 'Google/Chrome/Application/chrome.exe'),
+].filter(Boolean);
+const CHROME=process.env.CHROME_PATH || chromeCandidates.find((p)=>fs.existsSync(p));
+if(!CHROME) throw new Error('Chrome not found. Set CHROME_PATH to a Chrome or Chromium executable.');
 const NAME={same:'scene_same-order',review:'scene_review-confirm',recap:'scene_recap',f4:'scene4_quotation_full',f5:'scene5_sales-order_full',f6:'scene6_delivery-order_full',f7:'scene7_invoice_full',s4:'scene4_quotation',s5:'scene5_sales-order',s6:'scene6_delivery-order',s7:'scene7_invoice',s8:'scene8_erp-sync'};
 (async()=>{
   const scene=process.argv[2], stills=process.argv[3]; const mode=process.argv[4]||'9x16'; const W=mode==='16x9'?1920:1080,H=mode==='16x9'?1080:1920;

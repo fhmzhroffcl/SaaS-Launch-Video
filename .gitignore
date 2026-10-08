@@ -1,7 +1,13 @@
 .DS_Store
 node_modules
+__pycache__/
 *.log
 
 # Generated render intermediates and superseded exports.
-work/build/
 previous_versions/
+work/build/*.mp4
+work/build/*.wav
+work/build/*.log
+work/build/*.ass
+work/build/cmd_*.txt
+work/build/sheets/
